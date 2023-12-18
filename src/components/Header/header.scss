@@ -1,0 +1,22 @@
+header {
+  top: 0;
+  z-index: 3;
+  height: 50px;
+  padding: 15px;
+
+  .brand {
+    margin-top: 2px;
+    // for improve Cumulative Layout Shift in light house need to add width and height for this
+    h1 {
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+  .scale-image {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

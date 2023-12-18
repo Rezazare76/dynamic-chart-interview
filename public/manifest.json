@@ -1,0 +1,54 @@
+{
+  "short_name": "Dynamic Chart",
+  "name": "Dynamic Chart",
+  "description": "Easily create your lesson chart and don't worry about prerequisite and co-requisite educational rules",
+  "orientation": "any",
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pwa-icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa-icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "navigation_ui": "hide",
+  "enableNotifications": false,
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "#34454c",
+  "background_color": "#ffffff",
+  "categories": ["education"],
+  "dir": "ltr",
+  "lang": "en",
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 0
+  }
+}

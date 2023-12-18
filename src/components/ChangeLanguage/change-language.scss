@@ -1,0 +1,25 @@
+.change-language {
+  .active {
+    height: 24px;
+    width: 40px;
+  }
+  .flag-list {
+    left: -55px;
+    top: 60px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 6;
+    box-shadow: 0 0 5px var(--tertiary);
+    & > li {
+      padding: 7px 10px;
+      gap: 10px;
+    }
+  }
+  &.true {
+    .flag-list {
+      top: 43px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

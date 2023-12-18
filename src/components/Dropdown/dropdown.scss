@@ -1,0 +1,74 @@
+.dropdown {
+  &:hover .dropdown-list {
+    height: 42px;
+    bottom: -38px;
+    visibility: visible;
+  }
+
+  &:hover .current img {
+    transform: rotate(90deg);
+  }
+
+  .current {
+    z-index: 2;
+    border: 1px solid var(--tertiary);
+    color: var(--dark);
+    padding: 8px 10px;
+
+    img {
+      width: 12px;
+      height: 12px;
+      transform: rotate(180deg);
+    }
+
+    &.true img {
+      transform: rotate(0deg);
+    }
+  }
+
+  .dropdown-list {
+    left: 0;
+    height: 0;
+    bottom: 11px;
+    border: 1px solid var(--tertiary);
+    background-color: var(--secondary);
+    overflow: hidden;
+    z-index: 1;
+    visibility: hidden;
+
+    &.true {
+      height: 228px;
+      bottom: -220px;
+      overflow-y: scroll;
+      padding-top: 5px;
+      visibility: visible;
+    }
+
+    li {
+      padding: 10px 20px;
+      font-size: 14px;
+      color: var(--dark);
+
+      &:nth-child(even) {
+        background-color: var(--light-gray);
+      }
+      &:nth-child(odd) {
+        background-color: var(--secondary);
+      }
+      &:hover {
+        background-color: var(--tertiary);
+        color: var(--secondary) !important;
+      }
+
+      &.active {
+        background-color: var(--tertiary) !important;
+        color: var(--secondary);
+      }
+
+      .semester-color {
+        padding: 5px;
+        border-radius: 2px;
+      }
+    }
+  }
+}

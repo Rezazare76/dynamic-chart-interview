@@ -1,0 +1,106 @@
+.menu-list-container {
+  width: 300px;
+  z-index: 4;
+  overflow-y: auto;
+  overflow-x: hidden;
+  direction: rtl;
+  .menu-items {
+    direction: ltr;
+    padding: 18px 20px;
+    border-radius: 16px;
+    flex-grow: 1;
+    margin-left: 4px;
+
+    > li,
+    .social-media {
+      padding: 15px 8px;
+      border-radius: 10px;
+    }
+
+    li span {
+      margin: 0 10px;
+      flex-grow: 1;
+    }
+    li > .active {
+      border-radius: 50%;
+      box-shadow: 0 0 -5px var(--tertiary);
+      transition: all 0.5s;
+    }
+
+    > li .active.compact {
+      box-shadow: 0 0 14px var(--tertiary);
+    }
+    > li:hover {
+      background: var(--gray);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(0.5px);
+      -webkit-backdrop-filter: blur(0.5px);
+    }
+    .dropdown {
+      left: 0;
+      margin: 0 15px 17px;
+      height: 36px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .chevron-icon {
+      width: 27px;
+    }
+    .optimization {
+      &.true {
+        background: var(--gray);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.5px);
+        -webkit-backdrop-filter: blur(0.5px);
+        div > img {
+          transform: rotate(180deg);
+        }
+      }
+      &.false .step-progress {
+        height: 0;
+        padding: 0;
+        opacity: 0;
+      }
+    }
+    .social-media {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+      height: 60px;
+      img {
+        z-index: 2;
+      }
+      .telegram::after,
+      .aparat::after {
+        content: "";
+        padding: 12px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: all 0.5s;
+        z-index: 1;
+      }
+      .telegram:hover::after {
+        box-shadow: 0 0 16px 8px #25a1dc;
+      }
+      .aparat:hover::after {
+        box-shadow: 0 0 16px 8px #ed145b;
+      }
+      .linkedin:hover {
+        box-shadow: 0 0 14px 6px #007ab9;
+      }
+      .bazar:hover {
+        box-shadow: 0 0 14px 6px #5dc01e;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu-list-container {
+    width: 260px;
+  }
+}

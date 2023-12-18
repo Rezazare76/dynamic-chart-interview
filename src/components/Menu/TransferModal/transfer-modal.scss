@@ -1,0 +1,97 @@
+.TransferModal {
+  left: 50%;
+  top: 50%;
+  padding: 16px;
+  padding-bottom: 9px;
+  z-index: 6;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px 0px var(--primary);
+
+  .box-container {
+    gap: 16px;
+  }
+
+  .close {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 10px;
+    background: url("../../../assets/images/close.svg") no-repeat center/41px;
+  }
+
+  .transfer-box {
+    border: 2px dashed var(--tertiary);
+    padding: 16px 32px;
+    box-sizing: border-box;
+    width: 150px;
+    .download {
+      gap: 5px;
+      p {
+        font-size: 13px;
+      }
+      .public {
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  .upload {
+    top: -27px;
+    left: 0;
+    height: 145%;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .mirror {
+    top: 39px;
+    left: 182px;
+    height: 118px;
+    z-index: -1;
+  }
+
+  .on-drag {
+    animation-name: scaleUp;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+
+  .reset {
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+
+    > div {
+      margin-top: 4px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    &:hover {
+      background-color: var(--gray);
+    }
+  }
+  .confirm {
+    margin-top: 10px;
+    height: 50px;
+    .confirm-reset,
+    .confirm-cancel {
+      width: 112px;
+      margin: 0 6px;
+    }
+    & > div {
+      padding: 5px 8px;
+    }
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}

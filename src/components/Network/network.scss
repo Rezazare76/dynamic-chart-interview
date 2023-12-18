@@ -1,0 +1,120 @@
+.vis-manipulation {
+  background: var(--primary) !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: unset !important;
+  width: 160px !important;
+  height: 39px !important;
+  z-index: 2;
+  .vis-button {
+    font-family: Vazir, sans-serif !important;
+  }
+  .vis-button.vis-connect,
+  .vis-button.vis-add,
+  .vis-button.vis-back {
+    position: absolute !important;
+    right: 10px;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    border: none;
+    width: 140px;
+    height: 30px;
+  }
+  .vis-button.vis-connect {
+    // top: 289px;
+    -webkit-transform: translateY(288px);
+    -ms-transform: translateY(288px);
+    transform: translateY(288px);
+    .vis-label {
+      color: var(--primary);
+      margin: 0;
+    }
+  }
+  .vis-button.vis-add {
+    // top: 325px;
+    -webkit-transform: translateY(325px);
+    -ms-transform: translateY(325px);
+    transform: translateY(325px);
+    .vis-label {
+      color: var(--primary);
+      margin: 0;
+    }
+  }
+  .vis-button.vis-back {
+    // top: 325px;
+    -webkit-transform: translateY(325px);
+    -ms-transform: translateY(325px);
+    transform: translateY(325px);
+    .vis-label {
+      color: var(--primary);
+      margin: 0;
+    }
+  }
+  .vis-none {
+    display: none;
+  }
+  .vis-button {
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      background-color: var(--tertiary) !important;
+      color: var(--secondary) !important;
+      border-radius: 5px !important;
+      box-shadow: 0 0 8px var(--tertiary);
+      .vis-label {
+        color: var(--secondary);
+      }
+    }
+    &.vis-delete:hover {
+      background-color: var(--danger) !important;
+      box-shadow: 0 0 8px var(--danger);
+    }
+  }
+}
+
+.vis-network div.vis-manipulation button.vis-button {
+  &.vis-delete {
+    border: none !important;
+    padding-top: 3px;
+    top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets//images/delete.svg") !important;
+    background-size: 27px 38px !important;
+    background-position: 0px -5px !important;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px !important;
+    background: var(--danger);
+    background-repeat: no-repeat !important;
+    width: 140px;
+    height: 29px;
+    right: -11px;
+  }
+  & > div {
+    margin-left: 14px;
+  }
+}
+
+.vis-manipulation::before {
+  content: "Select Node";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  height: 29px;
+}
+.vis-network .vis-tooltip {
+  position: fixed;
+  background-color: var(--tertiary);
+  box-shadow: 0 0 5px var(--tertiary);
+  padding: 5px 8px;
+  border-radius: 5px;
+}

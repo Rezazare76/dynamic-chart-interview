@@ -1,0 +1,33 @@
+.right-click-menu {
+  z-index: 6;
+  box-shadow: 0 0 5px var(--tertiary);
+  width: 145px;
+  & img {
+    width: 25px;
+  }
+  &.false {
+    display: none;
+  }
+
+  .list {
+    .download {
+      p {
+        font-size: 13px;
+      }
+      .public {
+        padding: 2px 4px;
+      }
+    }
+    li {
+      padding: 8px 16px;
+      border-bottom: 0.1px solid var(--gray);
+      &:last-child {
+        border: none;
+      }
+
+      &:hover {
+        background-color: var(--gray);
+      }
+    }
+  }
+}

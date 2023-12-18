@@ -1,0 +1,106 @@
+.editor-property {
+  width: 160px;
+  top: 30px;
+  right: 0;
+  border-bottom-left-radius: 13px;
+  padding: 10px;
+  form {
+    input::selection {
+      background-color: var(--tertiary);
+    }
+    .unit-label {
+      top: 58px;
+      left: 16px;
+    }
+    .name-label {
+      top: 8px;
+    }
+    .radio-button {
+      background: var(--secondary);
+      border: 1px solid var(--secondary);
+      padding: 5px;
+      border-radius: 50%;
+    }
+    .checkbox-button {
+      border: 1px solid var(--secondary);
+      padding: 5px;
+    }
+    input[type="checkbox"]:checked {
+      & ~ .checkbox-button {
+        &::after {
+          content: " ";
+          width: 2px;
+          height: 5px;
+          display: block;
+          position: absolute;
+          left: 3.2px;
+          top: 1px;
+          border-right: 2px solid var(--secondary);
+          border-bottom: 2px solid var(--secondary);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .co-requisite {
+      margin: 5px 0;
+    }
+    .handle-form {
+      font-family: Vazir, sans-serif !important;
+      height: 29px;
+      margin-top: 5px;
+      padding-top: 2px;
+      border: none;
+      &.false {
+        box-shadow: 0 0 8px var(--danger);
+        background-color: var(--danger);
+        color: var(--secondary);
+      }
+      &.true {
+        &:hover {
+          background-color: var(--tertiary);
+          color: var(--secondary);
+          box-shadow: 0 0 8px var(--tertiary);
+        }
+      }
+      &:active {
+        box-shadow: 0 0 15px var(--tertiary);
+      }
+    }
+    span {
+      width: 87px;
+      font-size: 14px;
+    }
+    .mainConnector {
+      margin: 5px 0;
+    }
+  }
+  .network-button {
+    border-radius: 5px;
+    height: 29px;
+    margin-top: 7px;
+  }
+}
+.editor-property form .text-input,
+.editor-property form .number-input {
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 7px 0;
+}
+.editor-property form .name-label,
+.editor-property form .unit-label {
+  position: absolute;
+  font-size: 10px;
+  background: var(--primary);
+  left: 16px;
+  padding: 0 4px;
+}
+.editor-property form .text-input:hover,
+.editor-property form .number-input:hover {
+  box-shadow: 0 0 3px var(--tertiary);
+}
+.editor-property form input[type="radio"]:checked ~ .radio-button,
+.editor-property form input[type="checkbox"]:checked ~ .checkbox-button {
+  background-color: var(--tertiary);
+  box-shadow: 0 0 5px var(--tertiary);
+}

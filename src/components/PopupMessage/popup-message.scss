@@ -1,0 +1,51 @@
+.popup-message {
+  padding: 0.5rem;
+  box-shadow: 0 0 3px 3px var(--tertiary);
+  right: 10px;
+  z-index: 10;
+  margin: 0 0 10px 10px;
+  font-size: 14px;
+  > div {
+    padding: 0 0.5rem;
+  }
+  &.error {
+    box-shadow: 0 0 3px 3px var(--danger);
+  }
+  &.endless {
+    animation-name: endless;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+
+  &.end {
+    animation-name: end;
+    animation-duration: 4s;
+  }
+  .report {
+    text-decoration: underline;
+  }
+}
+
+@keyframes end {
+  1% {
+    bottom: -90px;
+  }
+
+  50% {
+    bottom: 10px;
+  }
+
+  100% {
+    bottom: -90px;
+  }
+}
+
+@keyframes endless {
+  from {
+    bottom: -50px;
+  }
+
+  to {
+    bottom: 10px;
+  }
+}
