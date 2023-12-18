@@ -6,7 +6,6 @@ dynamic-chart.ir : Create Custom University Lesson Charts. this repository is fo
 
 - **React**
 - **JavaScript**
-- **Webpack**
 - **Vis.js**
 
 ## How to View
