@@ -12,4 +12,4 @@ dynamic-chart.ir : Create Custom University Lesson Charts. this repository is fo
 
 - [website](https://dynamic-chart.ir/) (Live Demo)
 
-Enjoy exploring iCard.ir!
+Enjoy exploring dynamic-chart.ir!
